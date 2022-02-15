@@ -1,0 +1,15 @@
+﻿@model Address
+@{
+}
+
+<div class="YouMessedUp" asp-validation-summary="All"></div>
+<form asp-controller="Home" asp-action="ShowAddress" method="post">
+    <input asp-for="firstName" placeholder="First Name" />
+    <input asp-for="lastName" placeholder="Last Name" />
+    <input asp-for="Age" placeholder="Age" />
+    <input asp-for="streetAddress" placeholder="Street Address" />
+    <input asp-for="City" placeholder="City" />
+    <input asp-for="State" placeholder="State" />
+    <input asp-for="zipCode" placeholder="Zip code" />
+    <button type="submit"> Submit </button>
+</form>

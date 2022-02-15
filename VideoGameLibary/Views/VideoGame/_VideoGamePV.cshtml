@@ -1,0 +1,71 @@
+﻿@model VideoGame
+
+@{
+
+}
+<div class="card desgin">
+    <img src ="~/Image/@Model.Image" class="ImageLook card-img-top" title="@Model.Title" />
+    
+    <table class="table table_design">
+        <tr>
+            <td>
+                @Model.Title
+                @Model.ID
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Platform: @Model.PlatForm
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Gener: @Model.Genre
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Age Rating: @Model.AgeRateing
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Year: @Model.yearReleased;
+            </td>
+        </tr>
+
+        @if(Model.LoanedData.HasValue)
+            {
+                <tr>
+                    <td>
+                        <p> Loaned out on @Model.LoanedData</p>
+                        <form asp-controller="VideoGame" asp-action="Return" method="post">
+                            <input type ="text"value="@Model.ID" hidden name="ID"/>
+                            <button type="submit" class="btn btn-warning">Return</button>
+            
+                        </form>
+                    </td>
+                </tr>
+            }
+            else
+            {
+                <tr>
+                    <td>
+                        <p class="return"> Avalilable</p>
+                        <form asp-controller="VideoGame" asp-action="LoanGame" method="get">
+                            <input type="text" value="@Model.ID" hidden name="ID" />
+                            <button type="submit" class="btn btn-success"> Available</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+                <tr>
+                    <td>
+                        <form asp-controller="VideoGame" asp-action="Remove">
+                            <input type="text" value="@Model.ID" hidden name="ID" />
+                            <button type="submit" class="btn btn-success">Remove game</button>
+                        </form>
+                    </td>
+                </tr>
+    </table>
+</div>

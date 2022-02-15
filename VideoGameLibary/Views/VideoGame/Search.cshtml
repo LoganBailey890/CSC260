@@ -1,0 +1,25 @@
+﻿
+@model VideoGame
+@{
+}
+
+<div>
+    <div>
+        <form asp-controller="VideoGame" asp-action="SearchGame">
+            <div>
+                <input required name="name" placeholder="Enter Title" />
+            </div>
+            <button type="submit" > Search The collection </button>
+        </form>
+    </div>
+    <div>
+        <form asp-controller="VideoGame" asp-action="SearchCollection">
+            <div>
+                <input name="genre" placeholder="Enter Genre" />
+                <input name="platform" placeholder="Enter PlatForm" />
+                <input name="Rating" placeholder="Enter the age Rating" />
+            </div>
+            <button type="submit" > Filter Collection</button>       
+        </form>
+    </div>
+</div>

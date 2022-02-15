@@ -23,7 +23,12 @@ namespace Simple_mvc.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Future()
+        {
+            return View();
+        }
+
+        public IActionResult BeforeNeumont()
         {
             return View();
         }

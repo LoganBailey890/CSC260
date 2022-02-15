@@ -48,10 +48,33 @@ namespace CSC260
 
             app.UseEndpoints(endpoints =>
             {
+                //endpoints.MapControllerRoute(
+                //    name: "PizzaToTeast",
+                //    //pattern: "pizza",
+                //    //pattern: "pizza{id}",
+                //    //pattern: "pizza/{id?}",
+                //    pattern: "pizza/{id:int?}",
+                //    defaults: new { controller = "Home", action = "Test" });
+
+
+                //endpoints.MapControllerRoute(
+                //    name: "catchall",
+                //    pattern: "{*catchall}",
+                //    defaults: new { controller = "home", action = "error" }
+                //    );
+                endpoints.MapControllerRoute(
+                    name: "many",
+                    pattern: "colors/{*colors}",
+                    defaults: new { controller = "Home", action = "Colors" }
+                    );
+
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+
+
+
         }
     }
 }

@@ -2,14 +2,29 @@
 for details on configuring this project to bundle and minify static web assets. */
 
 a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+.error-messages
+{
+    color:red;
+    font-weight:bold
 }
 
 /* Provide sufficient contrast against white background */
 a {
   color: #0366d6;
+}
+
+/* class */
+.imgSmaller{
+    width: 300px;
+}
+/* ID */
+#shreksize{
+    width: 500px;
 }
 
 .btn-primary {

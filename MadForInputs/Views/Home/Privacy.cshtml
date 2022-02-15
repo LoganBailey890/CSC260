@@ -1,0 +1,25 @@
+﻿
+@if (!string.IsNullOrEmpty(ViewBag.noun) && !string.IsNullOrEmpty(ViewBag.nounPlural) && !string.IsNullOrEmpty(ViewBag.adjective) && !string.IsNullOrEmpty(ViewBag.verb) && !string.IsNullOrEmpty(ViewBag.nounPlural1) && !string.IsNullOrEmpty(ViewBag.color))
+{
+   <div>
+       <p>
+           Be my <strong> @ViewBag.noun </strong> <br />
+           <strong>@ViewBag.nounPlural</strong>  make the world go<strong>@ViewBag.adjective</strong><br />
+           Pickachu says "I <strong>@ViewBag.verb</strong> you"<br />
+           I love <strong>@ViewBag.nounPlural1</strong> <strong>@ViewBag.color</strong> does too <br />
+           You make my heart flutter
+       </p>
+   </div>
+}
+else
+{
+    <div>
+        <p>
+            you are missing something
+        </p>
+    </div>
+}
+       <div>
+           <a asp-area="" asp-controller="Home" asp-action="Index"> Try the mad lib again </a>
+       </div>
+

@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+
+    <form asp-controller="Home" asp-action="Privacy" method="post">
+        <div class="spaceBetweenInputs">
+            <input id="noun" type="text" name="noun" placeholder="Noun" />
+        </div>
+        <div class="spaceBetweenInputs">
+            <input id="nounPlural" type="text" name="nounPlural" placeholder="Plural Noun" />
+        </div>
+        <div class="spaceBetweenInputs">
+            <input id="adjective" type="text" name="Adjective" placeholder="Adjective" />
+        </div>
+        <div class="spaceBetweenInputs">
+            <input id="verb" type="text" name="Verb" placeholder="Verb" />
+        </div>
+        <div class="spaceBetweenInputs">
+            <input id="nounPlural1" type="text" name="nounPlural1" placeholder="Plural Noun" />
+        </div>
+        <div class="spaceBetweenInputs">
+            <input id="color" type="text" name="Color" placeholder="Color" />
+        </div>
+
+        <button type="submit">Submit</button>
+ 
+
+    </form>
+</div>

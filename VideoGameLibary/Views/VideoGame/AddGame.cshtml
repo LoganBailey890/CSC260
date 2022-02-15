@@ -1,0 +1,16 @@
+﻿
+@model VideoGame
+@{
+}
+
+<div>
+    <form asp-controller="VideoGame" asp-action="AddVideoGame" method="post">
+        <input required asp-for="Title" placeholder="Enter Title" />
+        <input required asp-for="yearReleased" placeholder="year" />
+        <input required asp-for="PlatForm" placeholder="Plat form" />
+        <input required asp-for="Genre" placeholder="Game Genre" />
+        <input required asp-for="AgeRateing" placeholder="Age Rateing" />
+        <input hidden asp-for="Image" placeholder="Image" />
+        <button type="submit" >add game</button>
+    </form>
+</div>

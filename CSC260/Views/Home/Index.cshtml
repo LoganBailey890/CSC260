@@ -1,34 +1,48 @@
 ﻿@{
-    ViewData["Title"] = "Home Page - in view";
+    ViewData["Title"] = "Home Page - in View";
 }
 
-<!--
-how to commit
 
--->
 <div class="row">
     <div class="col-sm-4 border">
-        <!---<a href="/home/privacy"Privacy></a>-->
-        <a asp-controller="Home" asp-action="Privacy">Privacy via Controler/Action</a>
-        <img src="/images/me2.png" width="100">
-
-        row 1 col 1
-    </div>
-    <div class="col-sm-4 border">
-        row 1 col 2
-    </div>
-    <div class="col-sm-4 border">
-        row1 col 3
-    </div>
-    <div class="row">
-        <div class="col-sm-8 col-xs-12 border">
-            row 2 col 1
-        </div>
-        <div class="col-sm-2 col-xs-12 border">
-            row 2 col 2
-        </div>
-        <div class="col-sm-2 col-xs-12 border">
-            row 2 col 3
-        </div>
+    <h1>Count: @ViewBag.count </h1>
+        <!--<a href="/home/privacy">Privacy</a>-->
+        <a asp-controller="Home" asp-action="Privacy" asp-route-version="Version">Privacy via Controller/Action</a>
+        <a asp-controller="Home" asp-action="Contact">
+        <a asp-controller="Home" asp-action="Test" asp-route-id="15">test</a>
+            <!--
+            <img src="~/Image/received_337503414543049.webp" id="shreksize" />
+            -->    
+        </a>
+        <a asp-controller="Movie" asp-action="DisplayMovie">Display Movie</a>
+        <a asp-controller="Movie" asp-action="Index">Movie Home Page</a>
     </div>
 </div>
+<div class="col-12">
+        <form asp-controller="Home" asp-action="Index">
+                <label for="FirstName">Increase Cout:</label>
+        <button type="submit">Click Me</button>
+    </form>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <form asp-controller="Home" asp-action="Result" method="post">
+
+        <label for="FirstName"> Firstname </label>
+        <input id="FirstName" type="text" name="FirstName" placeholder="First Name"/>
+         <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12">
+        <form asp-controller="Home" asp-action="Test" method="post">
+
+            <input id="id" type="text" name="id" placeholder="id" />
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+
